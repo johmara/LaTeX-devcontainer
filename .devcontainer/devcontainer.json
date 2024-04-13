@@ -1,0 +1,15 @@
+{
+    "name": "LaTeX",
+    "image": "texlive/texlive:latest",
+    "extensions": [
+        "james-yu.latex-workshop",
+        "vscode-icons-team.vscode-icons",
+        "eamodio.gitlens",
+        "shardulm94.trailing-spaces",
+        "tecosaur.latex-utilities",
+    ],
+    "settings": {
+        "latex-workshop.latex.autoClean.run": "onSucceeded",
+        "trailing-spaces.trimOnSave": true
+    }
+}
