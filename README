@@ -9,7 +9,7 @@ This repository contains a development environment for LaTeX that can be used wi
 
 ## Usage
 
-1. Clone this repository.
+1. Clone this repository, or simply copy the `.devcontainer` directory to your project.
 2. Open the repository in Visual Studio Code.
 3. When prompted, choose to reopen the project in the container. If you're not prompted, press `F1`, type `Reopen in Container`, and hit `Enter`.
 
