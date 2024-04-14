@@ -21,10 +21,9 @@ The LaTeX Workshop extension enhances the LaTeX editing experience in Visual Stu
 
 ## Other Extensions
 
-Feel free to add or remove the other extensions from the devcontainer.
+Feel free to add or remove the other extensions from the devcontainer. The extensions currently are:
 
-**The extensions currently are:**
- - vscode icons, Bring real icons to your Visual Studio Code
- - gitlens, GitLens supercharges your Git experience in VS Code
- - trailing spaces, highlight trailing spaces and delete them in a flash!
- - latex utilities, An add-on to LaTeX Workshop that provides some fancy features
+- vscode icons: Bring real icons to your Visual Studio Code
+- gitlens: GitLens supercharges your Git experience in VS Code
+- trailing spaces: Highlight trailing spaces and delete them in a flash!
+- latex utilities: An add-on to LaTeX Workshop that provides some fancy features
