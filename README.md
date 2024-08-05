@@ -1,3 +1,5 @@
+[![Download PDF](https://img.shields.io/badge/download-doc.pdf-blue)](https://github.com/johmara/LaTeX-devcontainer/releases/latest)
+
 # LaTeX-template with Integrated Development Environment
 
 This repository contains:
