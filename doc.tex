@@ -1,7 +1,39 @@
-\documentclass[sigplan,anonymous,review]{acmart}
+\documentclass{article}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[left=15mm,right=15mm]{geometry}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}p{#1}}
+
+\author{Johan Martinson\\Team Debit}
 \begin{document}
 
-A simple \LaTeX \hspace{3pt}.devcontainer setup for vscode with the Latex Workshop extension.
-\\ The other extensions are optional.
+\title{Summary of benefits and use cases of Feature Flags}
+\maketitle
+
+
+\subsection*{Use cases for the finance domain}
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{Feature flag use-cases}
+        \label{tab:useCases}
+        \renewcommand{\arraystretch}{1.5} % Increase the height of rows that are not part of a multirow
+        \begin{tabular}{m{.25\linewidth}lm{.5\linewidth}} % Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+            \textbf{Use Case} & \textbf{Feature Flag type} & \textbf{User Story}                                                                                                                         \\
+            \multirow{2}{\linewidth}{Consistently deploy code to production.} & \multirow{2}{*}{\centering Non-static} & As a Centiro developer I want to consistently push code to production, without having effect until I enable the code through a feature flag. \\
+             & & As a Centiro developer I want to remove feature flags once the feature is tested and implemented as standard (a mandatory feature.)                                                                                                                                 \\
+             \hline
+             \multirow{1}{\linewidth}{Use of optional features.} & \multirow{1}{*}{\centering Static} & As a Centiro developer I want to have certain parts of code enabled for certain tenants especially when the feature is customer specific. \\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection*{Benefits}
+\begin{itemize}
+    \item
+\end{itemize}
+
+
 
 \end{document}

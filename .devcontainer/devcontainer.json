@@ -7,9 +7,22 @@
         "eamodio.gitlens",
         "shardulm94.trailing-spaces",
         "tecosaur.latex-utilities",
+        "mathematic.vscode-latex",
+        "neo-ltex.ltex"
     ],
     "settings": {
         "latex-workshop.latex.autoClean.run": "onSucceeded",
-        "trailing-spaces.trimOnSave": true
+        "trailing-spaces.trimOnSave": true,
+        "latex-workshop.linting.run": "onType",
+        "latex-utilities.formattedPaste.useAsDefault": false,
+        "latex-utilities.message.update.show": false,
+        "latex-workshop.linting.chktex.enabled": true,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "workbench.iconTheme": "vscode-icons",
+        "editor.tokenColorCustomizations": {
+            "[Visual Studio Light]": {
+                "functions": "#0000FF",
+            },
+        }
     }
 }
