@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Generic LaTeX service with Python - works for any paper
+  latex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: latex-${COMPOSE_PROJECT_NAME}
+    working_dir: /papers
+    command: sleep infinity
+    networks:
+      - latex-network
+    volumes:
+      - ..:/papers
+      - latex-packages:/usr/local/texlive/texmf-local
+      - latex-cache:/root/.cache
+      # The paper-specific volume mount will be added by devcontainer
+
+volumes:
+  latex-packages:
+  latex-cache:
+
+networks:
+  latex-network:
+    driver: bridge
