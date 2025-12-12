@@ -1,7 +1,11 @@
 {
-    "name": "LaTeX",
-    "image": "texlive/texlive:latest",
-    "extensions": [
+  "name": "LaTeX",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "latex",
+  "workspaceFolder": "/papers",
+  "customizations": {
+    "vscode": {
+      "extensions": [
         "james-yu.latex-workshop",
         "vscode-icons-team.vscode-icons",
         "eamodio.gitlens",
@@ -9,20 +13,33 @@
         "tecosaur.latex-utilities",
         "mathematic.vscode-latex",
         "neo-ltex.ltex"
-    ],
-    "settings": {
+      ],
+      "settings": {
         "latex-workshop.latex.autoClean.run": "onSucceeded",
-        "trailing-spaces.trimOnSave": true,
         "latex-workshop.linting.run": "onType",
+        "latex-workshop.linting.chktex.enabled": true,
         "latex-utilities.formattedPaste.useAsDefault": false,
         "latex-utilities.message.update.show": false,
-        "latex-workshop.linting.chktex.enabled": true,
+        "trailing-spaces.trimOnSave": true,
         "diffEditor.ignoreTrimWhitespace": false,
         "workbench.iconTheme": "vscode-icons",
+        // Editor settings
         "editor.tokenColorCustomizations": {
-            "[Visual Studio Light]": {
-                "functions": "#0000FF",
-            },
-        }
+          "[Visual Studio Light]": {
+            "functions": "#0000FF"
+          }
+        },
+        "editor.wordWrap": "on",
+        "editor.formatOnSave": true,
+        "window.title": "${dirty}${separator}${rootNameShort}${separator}LaTeX"
+      }
     }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/.gitconfig,target=/root/.gitconfig,type=bind",
+    "type=volume,source=latex-packages,target=/usr/local/texlive/texmf-local",
+    "type=volume,source=latex-cache,target=/root/.cache"
+  ],
+  "shutdownAction": "none",
+  "postCreateCommand": "sh -c \"echo 'Base LaTeX environment initialized'\""
 }
