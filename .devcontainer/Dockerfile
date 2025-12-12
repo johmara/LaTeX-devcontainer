@@ -1,6 +1,10 @@
 FROM texlive/texlive:latest
 
-# Add tlmgr to PATH
-ENV PATH="/usr/local/texlive/2024/bin/x86_64-linux:${PATH}"
+# Install Python and pip
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN tlmgr install latexindent
+# Verify installation
+RUN python3 --version && pip3 --version
